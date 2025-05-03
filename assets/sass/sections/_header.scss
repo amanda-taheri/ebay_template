@@ -1,0 +1,35 @@
+.header{
+    &__container{
+        height: 8rem;
+        background-color: red;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        
+    }
+
+    &__logo{
+        &--img{
+            width: 10rem;
+            height: 10rem;
+        }
+    }
+    &__flag{
+        &--img{
+            width: 10rem;
+            height: 10rem;
+        }
+    }
+    &__items{
+        display: flex;
+        flex-direction: row;
+        font-size: 2rem;
+        align-items: flex-start;
+        > * {
+            margin: 1rem;
+            
+        }
+    }
+}

@@ -31,4 +31,36 @@ button {
   all: unset;
 }
 
+body {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.header__container {
+  height: 8rem;
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.header__logo--img {
+  width: 10rem;
+  height: 10rem;
+}
+.header__flag--img {
+  width: 10rem;
+  height: 10rem;
+}
+.header__items {
+  display: flex;
+  flex-direction: row;
+  font-size: 2rem;
+  align-items: flex-start;
+}
+.header__items > * {
+  margin: 1rem;
+}
+
 /*# sourceMappingURL=main.css.map */
