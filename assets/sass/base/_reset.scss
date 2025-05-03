@@ -1,0 +1,30 @@
+*,
+*::before,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400; 
+    overflow-x: hidden;
+    
+}
+ol, ul, li{
+	list-style: none;
+}
+a{
+  text-decoration: none;
+  cursor: pointer;
+  
+}
+button{
+    
+    all:unset;
+}

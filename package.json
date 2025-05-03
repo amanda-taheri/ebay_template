@@ -1,0 +1,14 @@
+{
+  "name": "dsa-templates",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "watch": "sass assets/sass/main.scss assets/css/main.css --watch",
+  "compile": "sass assets/sass/main.scss assets/css/main.css"
+},
+  "keywords": [],
+  "author": "Amanda, Erfan, Mostafa",
+  "license": "ISC",
+  "type": "commonjs"
+}
