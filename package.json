@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "watch": "sass assets/sass/main.scss assets/css/main.css --watch",
-  "compile": "sass assets/sass/main.scss assets/css/main.css"
+  "watch": "node-sass assets/sass/main.scss assets/css/main.css --watch",
+  "compile": "node-sass assets/sass/main.scss assets/css/main.css"
 },
   "keywords": [],
   "author": "Amanda, Erfan, Mostafa",

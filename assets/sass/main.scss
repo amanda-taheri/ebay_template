@@ -1,11 +1,16 @@
+// Abstracts
 @use 'abstracts/variables';
 @use 'abstracts/mixins';
 
+// Base
 @use 'base/reset';
 @use 'base/base';
 
+// Components
 @use 'components/buttons';
 @use 'components/cards';
 
+// Sections
 @use 'sections/header';
+@use 'sections/faq';
 @use 'sections/footer';
