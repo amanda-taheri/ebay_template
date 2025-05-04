@@ -1,15 +1,11 @@
-@import 
-  'abstracts/variables',
-  'abstracts/mixins';
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
 
-@import 
-  'base/reset',
-  'base/base';
+@use 'base/reset';
+@use 'base/base';
 
-@import 
-  'components/buttons',
-  'components/cards';
+@use 'components/buttons';
+@use 'components/cards';
 
-@import 
-  'sections/header',
-  'sections/footer';
+@use 'sections/header';
+@use 'sections/footer';
