@@ -38,29 +38,54 @@ body {
 
 .header__container {
   height: 8rem;
-  background-color: red;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
+  padding: 20px 40px;
+  position: relative;
+}
+.header__logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .header__logo--img {
-  width: 10rem;
+  width: 15rem;
   height: 10rem;
 }
 .header__flag--img {
-  width: 10rem;
-  height: 10rem;
+  width: 15rem;
+  height: 8rem;
 }
 .header__items {
   display: flex;
   flex-direction: row;
   font-size: 2rem;
   align-items: flex-start;
+  gap: 2rem;
 }
-.header__items > * {
-  margin: 1rem;
+.header__items p {
+  margin: 0;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.header__items p:hover {
+  color: #0f0ff1;
+}
+
+.footer__container {
+  height: 2rem;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+}
+
+.copyright {
+  font-size: larger;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=main.css.map */

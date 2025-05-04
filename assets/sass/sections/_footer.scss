@@ -1,0 +1,13 @@
+.footer{
+    &__container{
+        height: 2rem;
+        background-color: gray;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.copyright{
+    font-size: larger;
+    margin: 0 auto;
+}

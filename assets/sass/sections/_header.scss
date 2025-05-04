@@ -1,25 +1,32 @@
 .header{
     &__container{
         height: 8rem;
-        background-color: red;
+        // background-color: red;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         margin: 0 auto;
+        padding: 20px 40px;
+        position: relative;
         
     }
 
     &__logo{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
         &--img{
-            width: 10rem;
+            width: 15rem;
             height: 10rem;
+            
         }
     }
     &__flag{
         &--img{
-            width: 10rem;
-            height: 10rem;
+            width: 15rem;
+            height: 8rem;
         }
     }
     &__items{
@@ -27,9 +34,17 @@
         flex-direction: row;
         font-size: 2rem;
         align-items: flex-start;
-        > * {
-            margin: 1rem;
-            
+        gap: 2rem;
+
+        p {
+            margin: 0;
+            font-weight: 500;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        p:hover {
+            color: #0f0ff1;
         }
     }
 }
