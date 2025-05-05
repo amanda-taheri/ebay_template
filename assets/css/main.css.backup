@@ -1,0 +1,219 @@
+@media (max-width: 768px) {
+  .header__container {
+    padding: 10px 20px;
+  }
+  .header__items {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+*,
+*::before,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  all: unset;
+}
+
+body {
+  width: 95%;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body a:visited {
+  color: inherit;
+}
+
+.header__container {
+  height: 8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px 40px;
+  position: relative;
+  box-shadow: 0px 2px 10px 0px rgba(207, 132, 85, 0.5);
+  border-radius: 5px;
+}
+.header__logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header__logo--img {
+  width: 15rem;
+  height: 10rem;
+}
+.header__flag--img {
+  width: 15rem;
+  height: 8rem;
+}
+.header__items {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.5rem;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.header__items p {
+  margin: 0;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s;
+  font-weight: 600;
+}
+.header__items p:hover, .header__items p:focus {
+  color: #cf8455;
+  transform: scale(1.08);
+  transition: transform 0.2s ease-in-out;
+}
+
+.ebay-faq-section {
+  background-color: #f7f7f7;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  padding: 30px 0;
+  color: #333;
+}
+
+.ebay-faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.faq-main-title {
+  color: #003366;
+  font-size: 28px;
+  margin: 0 0 10px 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.faq-intro {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.ebay-faq-accordion {
+  margin: 25px 0;
+}
+
+.faq-item {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background: #fff;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 15px 20px;
+  text-align: left;
+  background: #f5f5f5;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: #003366;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+.faq-question:hover {
+  background: #e9e9e9;
+}
+
+.faq-question[aria-expanded=true] {
+  background: #e1e1e1;
+}
+
+.accordion-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="%23003366" d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"/></svg>') no-repeat center;
+  transition: transform 0.3s;
+}
+
+.faq-question[aria-expanded=true] .accordion-icon {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-answer[aria-expanded=true] {
+  padding: 20px;
+  max-height: 500px;
+}
+
+.faq-answer p {
+  margin: 0 0 15px 0;
+  line-height: 1.5;
+  font-weight: 200;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .faq-main-title {
+    font-size: 24px;
+  }
+  .faq-question {
+    padding: 12px 15px;
+    font-size: 15px;
+  }
+}
+.faq__container {
+  margin: 2rem 0;
+}
+
+.footer__container {
+  height: 2rem;
+  background-color: #61321b;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.copyright {
+  font-size: larger;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=main.css.map */
