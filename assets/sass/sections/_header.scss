@@ -9,7 +9,11 @@
         margin: 0 auto;
         padding: 20px 40px;
         position: relative;
-        
+        box-shadow: 0px 2px 10px 0px rgba(#cf8455, 0.5);
+        // box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        // background: linear-gradient(135deg, #ff7e5f, #feb47b);
+   
     }
 
     &__logo{
@@ -32,7 +36,7 @@
     &__items{
         display: flex;
         flex-direction: row;
-        font-size: 2rem;
+        font-size: 1.5rem;
         align-items: flex-start;
         gap: 2rem;
 
@@ -41,10 +45,15 @@
             font-weight: 500;
             cursor: pointer;
             transition: color 0.3s;
+            font-weight: 600;
+            
+
         }
 
-        p:hover {
-            color: #0f0ff1;
+        p:hover, p:focus {
+            color: #cf8455;
+            transform: scale(1.08);
+            transition: transform 0.2s ease-in-out;
         }
     }
 }
