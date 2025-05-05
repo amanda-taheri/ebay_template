@@ -22,3 +22,86 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+
+
+
+
+
+// statics scripts
+class CounterAnimation {
+  constructor() {
+    this.counters = document.querySelectorAll('.stat-number');
+    this.animationStarted = false;
+    this.observerOptions = {
+      threshold: 0.3
+    };
+    this.init();
+  }
+
+  init() {
+    if (this.counters.length === 0) return;
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !this.animationStarted) {
+          this.animationStarted = true;
+          this.animateAllCounters();
+        }
+      });
+    }, this.observerOptions);
+
+    const statsSection = document.querySelector('.stats-container');
+    if (statsSection) observer.observe(statsSection);
+  }
+
+  formatNumber(num, format) {
+    if (format === 'short') {
+      if (num >= 1_000_000) return `${(num / 1_000_000).toFixed(1).replace(/\.0$/, '')}M`;
+      if (num >= 1_000) return `${(num / 1_000).toFixed(1).replace(/\.0$/, '')}K`;
+    }
+    return num.toString();
+  }
+
+  animateCounter(element, target, format) {
+    const duration = 1800;
+    const startTime = performance.now();
+    const startValue = 0;
+    const easeOutQuad = t => t * (2 - t);
+
+    const updateCounter = (timestamp) => {
+      const elapsed = timestamp - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easedProgress = easeOutQuad(progress);
+      const currentValue = Math.floor(startValue + (target - startValue) * easedProgress);
+      
+      element.textContent = format === 'plain' 
+        ? this.formatNumber(currentValue, format)
+        : `+${this.formatNumber(currentValue, format)}`;
+
+      if (progress < 1) {
+        requestAnimationFrame(updateCounter);
+      } else {
+        // Final update with exact target value
+        element.textContent = format === 'plain'
+          ? this.formatNumber(target, format)
+          : `+${this.formatNumber(target, format)}`;
+      }
+    };
+
+    requestAnimationFrame(updateCounter);
+  }
+
+  animateAllCounters() {
+    this.counters.forEach(counter => {
+      const target = parseInt(counter.dataset.target, 10);
+      const format = counter.dataset.format || 'plain';
+      this.animateCounter(counter, target, format);
+    });
+  }
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+  new CounterAnimation();
+});
