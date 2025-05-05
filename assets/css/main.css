@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @media (max-width: 768px) {
   .header__container {
     padding: 10px 20px;
@@ -214,6 +215,130 @@ body a:visited {
 .copyright {
   font-size: larger;
   margin: 0 auto;
+}
+
+.stats-container {
+  padding: 5rem 2rem;
+  background-color: #f9f5f2;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+.stats-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #e67e22, #66361e);
+}
+
+.stats-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #66361e;
+  position: relative;
+  display: inline-block;
+  font-family: "Helvetica Neue", Helvetica,  sans-serif;
+}
+.stats-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 3px;
+  background-color: #e67e22;
+  border-radius: 3px;
+}
+
+.premium-stats__subtitle {
+  font-size: 1.2rem;
+  color: #7a4a2b;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stat-card {
+  background-color: white;
+  padding: 2.5rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+.stat-card:hover::after {
+  transform: translateX(0);
+}
+.stat-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #e67e22, #66361e);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+}
+
+.stat-number {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #e67e22;
+  margin-bottom: 1rem;
+  font-family: "Arial", sans-serif;
+  transition: color 0.3s ease;
+}
+
+.stat-card:hover .stat-number {
+  color: #66361e;
+}
+
+.stat-label {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .stats-container {
+    padding: 3rem 1.5rem;
+  }
+  .stats-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .stat-card {
+    padding: 2rem 1rem;
+  }
+  .stat-number {
+    font-size: 2.2rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
