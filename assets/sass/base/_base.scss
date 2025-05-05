@@ -1,8 +1,16 @@
 body{
-    width: 95%;
+    width: 85%;
     margin: 0 auto;
     font-family: Arial, Helvetica, sans-serif;
+
+    border: 3px solid #D2B48C;
+    background-color: rgb(255, 255, 255);
+   
     a:visited {
         color: inherit; 
       }      
 }
+html{
+  background-color: rgba(#d3bb9c , 0.1);
+}
+

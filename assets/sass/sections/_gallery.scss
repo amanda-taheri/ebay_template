@@ -1,10 +1,4 @@
-/* Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
+
 
 /* Color Scheme */
 .u-light-brown { color: #c19a6b; }
@@ -13,7 +7,7 @@
 /* Section Styling */
 .u-section-1 {
     padding: 40px 0;
-    background-color: #f9f9f9;
+    // background-color: #f9f9f9;
 }
 
 .u-sheet-1 {
@@ -39,7 +33,7 @@
 }
 
 .u-custom-headline {
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-size: 2.5rem;
     margin: 10px 0;
     line-height: 1.2;
     color: #333;
@@ -174,4 +168,9 @@
         max-width: 300px;
         padding: 12px 20px;
     }
+}
+
+
+.u-gallery-item:hover {
+    box-shadow: 0px 2px 10px 0px rgba(#cf8455, 0.5);
 }
