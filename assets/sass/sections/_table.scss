@@ -1,0 +1,27 @@
+@media (max-width: 768px) {
+    table {
+      min-width: 100%;
+    }
+    th, td {
+      padding: 8px 10px !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    th, td {
+      padding: 6px 8px !important;
+      font-size: clamp(12px, 3.5vw, 14px) !important;
+    }
+  }
+
+  tr:hover td {
+      color: #5D4037 !important;
+  }
+  tr:hover td[style*="background-color: white"] {
+      background-color: #daa17b !important;
+      color: white !important;
+  }
+  tr:hover td[style*="background-color: #D2B48C"] {
+      background-color: #d8bc9a !important;
+  }
+
