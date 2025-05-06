@@ -27,11 +27,12 @@
     display: flex;
     justify-content: flex-start;
     min-width: 120px;
+    
 
     &--img {
       width: 20rem;
       height: 11rem;
-      object-fit: contain;
+      // object-fit: contain;
       transition: all 0.3s ease;
 
       @media (max-width: 900px) {
@@ -112,9 +113,10 @@
     min-width: 120px;
 
     &--img {
-      width: 12rem;
+      width: 14rem;
       height: auto;
       transition: all 0.3s ease;
+      margin-right: 3rem;
 
       @media (max-width: 900px) {
         width: 10rem;

@@ -96,7 +96,6 @@ body.no-scroll {
 .header__flag--img {
   width: 20rem;
   height: 11rem;
-  object-fit: contain;
   transition: all 0.3s ease;
 }
 @media (max-width: 900px) {
@@ -162,9 +161,10 @@ body.no-scroll {
   min-width: 120px;
 }
 .header__logo--img {
-  width: 12rem;
+  width: 14rem;
   height: auto;
   transition: all 0.3s ease;
+  margin-right: 3rem;
 }
 @media (max-width: 900px) {
   .header__logo--img {
