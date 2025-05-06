@@ -78,7 +78,7 @@ body.no-scroll {
   border-radius: 8px;
   position: sticky;
   flex-wrap: nowrap;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   z-index: 1000;
 }
 @media (max-width: 900px) {
@@ -89,10 +89,8 @@ body.no-scroll {
 @media (max-width: 770px) {
   .header__container {
     flex-wrap: wrap;
-    padding: 1rem 2rem;
-    height: auto;
-    height: 6rem;
     padding: 0 20px;
+    height: 8rem;
     align-items: center;
   }
 }
@@ -105,7 +103,7 @@ body.no-scroll {
 .header__flag--img {
   width: 20rem;
   height: 11rem;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 @media (max-width: 900px) {
   .header__flag--img {
@@ -133,7 +131,7 @@ body.no-scroll {
   font-size: 1.4rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header__items p:hover {
   color: #cf8455;
@@ -158,9 +156,15 @@ body.no-scroll {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 0 0 1rem 1rem;
     z-index: 5;
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
   }
   .header__items.active {
     display: flex;
+    transform: translateY(0);
+    opacity: 1;
+    animation: menuSlideIn 0.4s both;
   }
 }
 .header__logo {
@@ -171,8 +175,8 @@ body.no-scroll {
 }
 .header__logo--img {
   width: 14rem;
-  height: auto;
-  transition: all 0.3s ease;
+  height: 7.5rem;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   margin-right: 3rem;
 }
 @media (max-width: 900px) {
@@ -182,9 +186,10 @@ body.no-scroll {
 }
 @media (max-width: 770px) {
   .header__logo--img {
-    width: 15rem;
+    width: 13rem;
     margin: 0 auto;
-    max-height: 8rem;
+    height: 8rem;
+    transition: all 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
   }
 }
 @media (max-width: 770px) {
@@ -193,39 +198,55 @@ body.no-scroll {
     flex: 0 0 100%;
     justify-content: center;
     margin-bottom: 1rem;
+    transition: all 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
   }
 }
 
 .hamburger {
   display: none;
   flex-direction: column;
-  justify-content: space-around;
-  width: 2.5rem;
-  height: 2.5rem;
+  justify-content: space-between;
+  width: 2.8rem;
+  height: 2.2rem;
   background: transparent;
   border: none;
   cursor: pointer;
   position: absolute;
-  top: 1rem;
+  top: 3.5rem;
   right: 2rem;
   z-index: 10;
+  padding: 0.5rem 0;
+  transform: translateY(-50%);
 }
 .hamburger span {
+  display: block;
   width: 100%;
-  height: 0.3rem;
+  height: 0.25rem;
   background: #333;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  transform-origin: left center;
+  border-radius: 3px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
 }
-.hamburger.active span:first-child {
-  transform: rotate(45deg) translate(0.3rem, -0.3rem);
+.hamburger span:nth-child(1) {
+  transform-origin: top left;
+}
+.hamburger span:nth-child(3) {
+  transform-origin: bottom left;
+}
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(0.4rem, -0.3rem);
+  background: #cf8455;
 }
 .hamburger.active span:nth-child(2) {
   opacity: 0;
+  transform: translateX(-10px);
 }
-.hamburger.active span:last-child {
-  transform: rotate(-45deg) translate(0.3rem, 0.3rem);
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(0.4rem, 0.3rem);
+  background: #cf8455;
+}
+.hamburger:hover span {
+  background: #cf8455;
 }
 @media (max-width: 770px) {
   .hamburger {
@@ -243,13 +264,14 @@ body.no-scroll {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 4;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
 }
 .overlay.active {
   display: block;
   opacity: 1;
   pointer-events: auto;
+  animation: fadeIn 0.3s both;
 }
 
 body.no-scroll {
@@ -271,20 +293,53 @@ header {
 }
 .header__container.scrolled .header__logo--img {
   width: 9rem;
+  height: 7rem;
 }
 .header__container.scrolled .header__flag--img {
   width: 12rem;
-  height: 7rem;
+  height: 9.5rem;
 }
 @media (max-width: 770px) {
   .header__container.scrolled {
-    height: 5rem;
+    height: 6.3rem;
+    justify-content: flex-start;
+  }
+  .header__container.scrolled .header__logo {
+    flex: 0 0 auto;
+    justify-content: flex-start;
+    margin-bottom: 0;
+    transition: all 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
   }
   .header__container.scrolled .header__logo--img {
-    width: 8rem;
+    width: 8.2rem;
+    margin: 0;
+    margin-right: auto;
+    transform: translateX(1.5rem) scale(0.92) translateY(-4%);
+    transition: all 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  .header__container.scrolled .hamburger {
+    top: 3rem;
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes menuSlideIn {
+  from {
+    transform: translateY(-15px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .ebay-faq-section {
   padding: 20px 0;
   font-family: Arial, Helvetica, sans-serif;
