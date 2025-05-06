@@ -17,17 +17,17 @@
 </head>
 <body>
     <!-- !Header ------------------------------------------------------------------------------------>
-    <header class="header__container">
+    <header class="header__container" id="header">
       <div class="header__flag">
         <img class="header__flag--img" src="./assets/img/flag2.png" alt="flag" />
       </div>
     
       <nav class="header__items">
-        <a href="#"><p>About Us</p></a>
-        <a href="#"><p>Item Specifics</p></a>
-        <a href="#"><p>Policies</p></a>
-        <a href="#"><p>FAQ</p></a>
-        <a href="#"><p>Contact Us</p></a>
+        <a href="#contact"><p>About Us</p></a>
+        <a href="#table"><p>Item Specifics</p></a>
+        <a href="#policy"><p>Policies</p></a>
+        <a href="#ebay-faq"><p>FAQ</p></a>
+        <!-- <a href="#contact"><p>Contact Us</p></a> -->
       </nav>
     
       <div class="header__logo">
@@ -43,7 +43,7 @@
      
     <!-- !/Header ------------------------------------------------------------------------------------>
     <!-- *title and image gallery --------------------------------------------------------------------------------------->
-    <section class="u-align-center u-clearfix u-container-align-center u-section-1" id="premium-seat-covers">
+    <section id="gallery" class="u-align-center u-clearfix u-container-align-center u-section-1" id="premium-seat-covers">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
           
           <!-- Professional Headline -->
@@ -93,7 +93,7 @@
     <!-- */title and image gallery--------------------------------------------------------------------------------------->
     
     <!-- *product title and images --------------------------------------------------------------------------------------->
-     <section class="product-img__container">
+     <section id="product" class="product-img__container">
       <div style="text-align: center; ">
         <h3 style="font-size:0.9rem;">
           <b>{title}</b>
@@ -103,7 +103,7 @@
      </section>
     <!-- */product images --------------------------------------------------------------------------------------->
     <!-- *specifics --------------------------------------------------------------------------------------->
-    <div class="responsive-table-container">
+    <div id="table" class="responsive-table-container">
       <table class="feature-table">
           <thead>
               <tr>
@@ -149,7 +149,7 @@
   </div>
     <!-- */specifics --------------------------------------------------------------------------------------->
     <!-- *statics --------------------------------------------------------------------------------------->
-    <section class="stats-container">
+    <section id="statics" class="stats-container">
       <div class="stats-title">Our Story in Numbers</div>
       <p class="premium-stats__subtitle">Every number tells a story of quality craftsmanship and customer satisfaction</p>
       <div class="stats-grid">
@@ -173,7 +173,7 @@
     </section>
     <!-- */statics --------------------------------------------------------------------------------------->
     <!-- *before/after --------------------------------------------------------------------------------------->
-     <section class="ba__container">
+     <section id="ba" class="ba__container">
       <header class="BA__main">
         <div class="slider3">
           <svg class="slider3__mask" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080" width="0" height="0">
@@ -248,7 +248,7 @@ window.location.href="#slide-1";
 </script>
     <!-- */before/after --------------------------------------------------------------------------------------->
     <!-- *certificates --------------------------------------------------------------------------------------->
-    <section class="quality">
+    <section id="certificates" class="quality">
         <div class="quality__container">
             <!-- Section Heading -->
             <h2 class="quality__heading">Premium Materials & Craftsmanship</h2>
@@ -301,7 +301,7 @@ window.location.href="#slide-1";
     </section>
     <!-- *certificates --------------------------------------------------------------------------------------->
     <!-- *policy --------------------------------------------------------------------------------------->
-    <section class="policy-section">
+    <section id="policy" class="policy-section">
       <div class="policy-container">
         <h2 class="policy-main-title">Our Policies</h2>
         <p class="policy-subtitle">Clear guidelines for your peace of mind</p>
@@ -425,7 +425,7 @@ window.location.href="#slide-1";
 
     <!-- */FAQ --------------------------------------------------------------------------------------->
     <!-- *suggestion --------------------------------------------------------------------------------------->
-     <section class="suggestion__container">
+     <section id="suggestion" class="suggestion__container">
 
       {suggested-items-columns[3]-max[9]-store-categories}
      </section>
@@ -539,7 +539,7 @@ window.location.href="#slide-1";
      </section>
     <!-- */brands --------------------------------------------------------------------------------------->
     <!-- *contact --------------------------------------------------------------------------------------->
-     <section class="contact__container">
+     <section id="contact" class="contact__container">
       <div class="responsive-container-block bigContainer">
         <div class="responsive-container-block Container bottomContainer">
           <div class="ultimateImg">
@@ -561,7 +561,7 @@ window.location.href="#slide-1";
      </section>
     <!-- */contact --------------------------------------------------------------------------------------->
     <!-- *cta --------------------------------------------------------------------------------------->
-    <div class="seat-cover-cta" style="font-family: Arial, sans-serif; ; margin: 0 auto; border: 2px solid #8B4513; padding: 20px; border-radius: 10px; background: linear-gradient(to bottom, #F5DEB3, #D2B48C); text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 4rem;  margin-top: 2rem;">
+    <div id="cta" class="seat-cover-cta" style="font-family: Arial, sans-serif; ; margin: 0 auto; border: 2px solid #8B4513; padding: 20px; border-radius: 10px; background: linear-gradient(to bottom, #F5DEB3, #D2B48C); text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 4rem;  margin-top: 2rem;">
       <h2 style="color: #5D2906; font-size: 24px;margin-bottom: 2rem; margin-top: 0; text-shadow: 1px 1px 2px rgba(255,255,255,0.5);">🚀 Premium Seat Covers Await!</h2>
       <ul style="text-align: left; padding-left: 20px; color: #5D2906; font-size: 16px; line-height: 1.6; list-style-type: none;">
           <li style="margin-bottom: 10px;"><span style="background-color: #8B4513; color: white; padding: 2px 8px; border-radius: 50%; margin-right: 10px;">✓</span> <strong>Luxury Fit</strong> – Custom-tailored for your car model</li>
