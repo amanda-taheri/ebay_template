@@ -9,23 +9,12 @@ document.addEventListener('DOMContentLoaded', function() {
       question.addEventListener('click', function() {
           const isExpanded = question.getAttribute('aria-expanded') === 'true';
           
-          // Close all other questions
-          questions.forEach(q => {
-              if (q !== question) {
-                  q.setAttribute('aria-expanded', 'false');
-                  document.getElementById(q.getAttribute('aria-controls')).setAttribute('aria-expanded', 'false');
-              }
-          });
-          
           // Toggle current question
           question.setAttribute('aria-expanded', !isExpanded);
           answer.setAttribute('aria-expanded', !isExpanded);
       });
   });
 });
-
-
-
 
 // statics scripts
 class CounterAnimation {
@@ -161,3 +150,14 @@ document.addEventListener('DOMContentLoaded', function() {
       updateSlider2();
   }, 3000);
 }); 
+
+
+  //BA Section
+
+          window.location.href="#slide-1";
+                 
+
+  
+
+
+

@@ -49,7 +49,7 @@
           <!-- Interactive Gallery -->
           <div class="u-gallery-container">
               <div class="u-gallery-item">
-                  <img src="images/light-brown-seat-cover.jpg" alt="Light Brown Seat Cover">
+                  <img src="/assets/img/title-3.jpg" alt="Light Brown Seat Cover">
                   <div class="u-gallery-overlay">
                       <h3>Light Brown</h3>
                       <p>Breathable premium fabric</p>
@@ -57,7 +57,7 @@
               </div>
               
               <div class="u-gallery-item">
-                  <img src="images/dark-brown-seat-cover.jpg" alt="Dark Brown Seat Cover">
+                  <img src="/assets/img/title-2.jpg" alt="Dark Brown Seat Cover">
                   <div class="u-gallery-overlay">
                       <h3>Dark Brown</h3>
                       <p>Luxury leather-look</p>
@@ -65,7 +65,7 @@
               </div>
               
               <div class="u-gallery-item">
-                  <img src="images/seat-cover-installed.jpg" alt="Installed Seat Cover">
+                  <img src="/assets/img/title-1.jpg" alt="Installed Seat Cover">
                   <div class="u-gallery-overlay">
                       <h3>Perfect Fit</h3>
                       <p>For all car models</p>
@@ -163,8 +163,78 @@
     <!-- */statics --------------------------------------------------------------------------------------->
     <!-- *before/after --------------------------------------------------------------------------------------->
      <section class="ba__container">
-
+      <header class="BA__main">
+        <div class="slider3">
+          <svg class="slider3__mask" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080" width="0" height="0">
+            <defs>
+              <!-- Slide 1 -->
+              <pattern id="pattern1l" patternUnits="userSpaceOnUse" width="562" height="366" viewBox="0 0 562 366">
+                <image xlink:href="/assets/img/before-1.jpg" width="600px" height="600px"/>
+              </pattern>
+              <pattern id="pattern1r" patternUnits="userSpaceOnUse" x="365px" width="562" height="366" viewBox="0 0 562 366">
+                <image xlink:href="/assets/img/after-1.jpg" width="600px" height="600px"/>
+              </pattern>
+              
+              <!-- Slide 2 -->
+              <pattern id="pattern2l" patternUnits="userSpaceOnUse" width="562" height="366" viewBox="0 0 562 366">
+                <image xlink:href="/assets/img/before-2.jpg" width="600px" height="600px"/>
+              </pattern>
+              <pattern id="pattern2r" patternUnits="userSpaceOnUse" x="365" width="562" height="366" viewBox="0 0 562 366">
+                <image xlink:href="/assets/img/after-2.jpg" width="600px" height="600px"/>
+              </pattern>
+            </defs>
+          </svg>
+    
+          <div class="slide3" id="slide3-1">
+            <svg class="slide3__bg" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1920" height="1080">
+              <rect x="0" y="0" width="1920" height="1080" fill="url(#bg1)" />
+            </svg>
+            <div class="slide3__images">
+              <div class="slide3__image slide3__image--left">
+                <svg viewBox="0 0 900 365" version="1.1"	xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px">
+                  <path d="M 0 0 L 0 365 L 351.2382 365 L 562 0 L 0 0 Z" fill="url(#pattern1l)"/>
+                </svg>
+              </div>
+    
+              <div class="slide3__image slide3__image--right">
+                <svg viewBox="0 0 900 365" version="1.1"	xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px">
+                  <path d="M 900 365 L 900 0 L 548.7618 0 L 338 365 L 900 365 Z" fill="url(#pattern1r)"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+    
+          <div class="slide3" id="slide3-2">
+            <svg class="slide3__bg" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1920" height="1080">
+              <rect x="0" y="0" width="1920" height="1080" fill="url(#bg2)" />
+            </svg>
+            <div class="slide3__images">
+              <div class="slide3__image slide3__image--left">
+                <svg viewBox="0 0 900 365" version="1.1"	xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px">
+                  <path d="M 0 0 L 0 365 L 351.2382 365 L 562 0 L 0 0 Z" fill="url(#pattern2l)"/>
+                </svg>
+              </div>
+    
+              <div class="slide3__image slide3__image--right">
+                <svg viewBox="0 0 900 365" version="1.1"	xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px">
+                  <path d="M 900 365 L 900 0 L 548.7618 0 L 338 365 L 900 365 Z" fill="url(#pattern2r)"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+    
+        <div class="slider3__pagination">
+          <a href="#slide3-1" class="button3">Slide 1</a>
+          <a href="#slide3-2" class="button3">Slide 2</a>
+        </div>
+      </header>
      </section>
+<script>
+  // Force redirect to first slide
+window.location.href="#slide-1";
+
+// All images are from https://unsplash.com/
+</script>
     <!-- */before/after --------------------------------------------------------------------------------------->
     <!-- *certificates --------------------------------------------------------------------------------------->
     <section class="quality">
@@ -177,9 +247,9 @@
                 <div class="quality__slider-container">
                     <div class="slider2">
                         <div class="slider2__wrapper">
-                            <img src="img/material1.jpg" alt="High-quality seat cover material" class="slider2__img">
-                            <img src="img/material2.jpg" alt="Durable seat cover fabric" class="slider2__img">
-                            <img src="img/material3.jpg" alt="Premium stitching details" class="slider2__img">
+                            <img src="/assets/img/material-1.jpg" alt="High-quality seat cover material" class="slider2__img">
+                            <img src="/assets/img/material-2.jpg" alt="Durable seat cover fabric" class="slider2__img">
+                            <img src="/assets/img/material-3.jpg" alt="Premium stitching details" class="slider2__img">
                         </div>
                         
                         <!-- Slider Controls -->
@@ -287,7 +357,7 @@
     <!-- *FAQ --------------------------------------------------------------------------------------->
     <section class="ebay-faq-section" id="ebay-faq">
       <div class="ebay-faq-container">
-          <h2 class="faq-main-title">Frequently Asked Questions (FAQ)</h2>
+          <h2 class="faq-main-title">Frequently Asked Questions</h2>
           <p class="faq-intro">Below you'll find answers to the most common questions we receive from our eBay customers.</p>
           
           <div class="ebay-faq-accordion">
@@ -341,6 +411,7 @@
           </div>
       </div>
   </section>
+
     <!-- */FAQ --------------------------------------------------------------------------------------->
     <!-- *suggestion --------------------------------------------------------------------------------------->
      <section class="suggestion__container">
@@ -458,11 +529,28 @@
     <!-- */brands --------------------------------------------------------------------------------------->
     <!-- *contact --------------------------------------------------------------------------------------->
      <section class="contact__container">
-
+      <div class="responsive-container-block bigContainer">
+        <div class="responsive-container-block Container bottomContainer">
+          <div class="ultimateImg">
+            <img class="mainImg" src="/assets/img/factory.webp">
+          </div>
+          <div class="allText bottomText">
+            <p class="text-blk headingText">
+              About Us
+            </p>
+            <p class="text-blk subHeadingText">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p class="text-blk description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum pulvinar ullamcorper suspendisse ac eget. Pellentesque tempus leo in ullamcorper quis vestibulum ligula elementum ut.
+            </p>
+          </div>
+        </div>
+      </div>
      </section>
     <!-- */contact --------------------------------------------------------------------------------------->
     <!-- *cta --------------------------------------------------------------------------------------->
-    <div class="seat-cover-cta" style="font-family: Arial, sans-serif; max-width: 58%; margin: 0 auto; border: 2px solid #8B4513; padding: 20px; border-radius: 10px; background: linear-gradient(to bottom, #F5DEB3, #D2B48C); text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 4rem;  margin-top: 2rem;">
+    <div class="seat-cover-cta" style="font-family: Arial, sans-serif; ; margin: 0 auto; border: 2px solid #8B4513; padding: 20px; border-radius: 10px; background: linear-gradient(to bottom, #F5DEB3, #D2B48C); text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 4rem;  margin-top: 2rem;">
       <h2 style="color: #5D2906; font-size: 24px;margin-bottom: 2rem; margin-top: 0; text-shadow: 1px 1px 2px rgba(255,255,255,0.5);">🚀 Premium Seat Covers Await!</h2>
       <ul style="text-align: left; padding-left: 20px; color: #5D2906; font-size: 16px; line-height: 1.6; list-style-type: none;">
           <li style="margin-bottom: 10px;"><span style="background-color: #8B4513; color: white; padding: 2px 8px; border-radius: 50%; margin-right: 10px;">✓</span> <strong>Luxury Fit</strong> – Custom-tailored for your car model</li>
@@ -483,7 +571,7 @@
     <!-- !/footer ------------------------------------------------------------------------------------>
 
 
-    <script src="./assets/js/my_script.js"></script>
+    <script src="./assets/js/my_script.js"></>
 </body>
 </html>
 <!-- test -->
