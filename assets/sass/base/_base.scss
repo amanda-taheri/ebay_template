@@ -13,4 +13,8 @@ body{
 html{
   background-color: rgba(#d3bb9c , 0.1);
 }
-
+body.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
