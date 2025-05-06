@@ -113,51 +113,51 @@ document.addEventListener('DOMContentLoaded', () => {
 // certification part
 
 document.addEventListener('DOMContentLoaded', function() {
-  const sliderWrapper = document.querySelector('.slider__wrapper');
-  const sliderImages = document.querySelectorAll('.slider__img');
-  const prevBtn = document.querySelector('.slider__btn--prev');
-  const nextBtn = document.querySelector('.slider__btn--next');
-  const indicators = document.querySelectorAll('.slider__indicator');
+  const slider2Wrapper = document.querySelector('.slider2__wrapper');
+  const slider2Images = document.querySelectorAll('.slider2__img');
+  const prevBtn = document.querySelector('.slider2__btn--prev');
+  const nextBtn = document.querySelector('.slider2__btn--next');
+  const indicators = document.querySelectorAll('.slider2__indicator');
   
   let currentIndex = 0;
-  const totalSlides = sliderImages.length;
+  const totalSlides2 = slider2Images.length;
   
-  function updateSlider() {
-      sliderWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+  function updateSlider2() {
+      slider2Wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
       
       // Update indicators
       indicators.forEach((indicator, index) => {
           if (index === currentIndex) {
-              indicator.classList.add('slider__indicator--active');
+              indicator.classList.add('slider2__indicator--active');
           } else {
-              indicator.classList.remove('slider__indicator--active');
+              indicator.classList.remove('slider2__indicator--active');
           }
       });
   }
   
   // Next slide
   nextBtn.addEventListener('click', function() {
-      currentIndex = (currentIndex + 1) % totalSlides;
-      updateSlider();
+      currentIndex = (currentIndex + 1) % totalSlides2;
+      updateSlider2();
   });
   
   // Previous slide
   prevBtn.addEventListener('click', function() {
-      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-      updateSlider();
+      currentIndex = (currentIndex - 1 + totalSlides2) % totalSlides2;
+      updateSlider2();
   });
   
   // Indicator clicks
   indicators.forEach((indicator, index) => {
       indicator.addEventListener('click', function() {
           currentIndex = index;
-          updateSlider();
+          updateSlider2();
       });
   });
   
   // Auto-rotate slides (optional)
   setInterval(() => {
-      currentIndex = (currentIndex + 1) % totalSlides;
-      updateSlider();
-  }, 5000);
-});
+      currentIndex = (currentIndex + 1) % totalSlides2;
+      updateSlider2();
+  }, 3000);
+}); 
