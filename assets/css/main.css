@@ -34,6 +34,7 @@ ol, ul, li {
 
 a {
   text-decoration: none;
+  color: black;
   cursor: pointer;
 }
 
@@ -649,7 +650,7 @@ html {
 
 .policy-subtitle {
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   color: #6d6d6d;
   margin-bottom: 3rem;
   max-width: 600px;
@@ -735,7 +736,7 @@ html {
 .policy-content {
   color: #6d6d6d;
   line-height: 1.7;
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
 
 .policy-highlights {
