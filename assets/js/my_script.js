@@ -161,3 +161,7 @@ document.addEventListener('DOMContentLoaded', function() {
       updateSlider2();
   }, 3000);
 }); 
+
+
+
+
