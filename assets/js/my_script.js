@@ -151,13 +151,19 @@ document.addEventListener('DOMContentLoaded', function() {
   }, 3000);
 }); 
 
-
   //BA Section
 
-          window.location.href="#slide-1";
-                 
+    window.location.href="#slide-1";
+ 
+//header part
 
-  
+document.addEventListener('DOMContentLoaded', function () {
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.header__items');
 
-
+  hamburger.addEventListener('click', function () {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+});
 

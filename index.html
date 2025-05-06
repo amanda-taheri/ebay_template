@@ -7,29 +7,40 @@
     
     <meta name="title" content="Custom OEM Seat Covers - Handcrafted in Houston, TX">
     <meta name="description" content="High-quality, made-to-order seat covers crafted to OEM standards in our Houston facility. Free U.S. shipping, global delivery, and a satisfaction guarantee.">
+    <meta name="keywords" content="OEM seat covers, custom seat covers, handmade seat covers, Houston seat covers, car seat upholstery, truck seat covers, leather seat covers, replacement seat covers, auto interior, custom car seats, SUV seat covers, high quality seat covers, automotive upholstery, seat cover shop USA">
+    <meta name="author" content="Auto Nation Seat Factory">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
     
+
     <title>US Auto Nation|OEM Seat Covers</title>
 </head>
 <body>
     <!-- !Header ------------------------------------------------------------------------------------>
     <header class="header__container">
       <div class="header__flag">
-        <img class="header__flag--img" src="./assets/img/flag2.png" alt="flag">
+        <img class="header__flag--img" src="./assets/img/flag2.png" alt="flag" />
       </div>
     
-      <div class="header__items">
+      <nav class="header__items">
         <a href="#"><p>About Us</p></a>
         <a href="#"><p>Item Specifics</p></a>
         <a href="#"><p>Policies</p></a>
         <a href="#"><p>FAQ</p></a>
         <a href="#"><p>Contact Us</p></a>
-      </div>
+      </nav>
     
       <div class="header__logo">
-        <a href="#"><img class="header__logo--img" src="./assets/img/Logo.png" alt="logo"></a>
+        <a href="#"><img class="header__logo--img" src="./assets/img/Logo.png" alt="logo" /></a>
       </div>
-    </header>
     
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+     
     <!-- !/Header ------------------------------------------------------------------------------------>
     <!-- *title and image gallery --------------------------------------------------------------------------------------->
     <section class="u-align-center u-clearfix u-container-align-center u-section-1" id="premium-seat-covers">
@@ -571,7 +582,50 @@ window.location.href="#slide-1";
     <!-- !/footer ------------------------------------------------------------------------------------>
 
 
-    <script src="./assets/js/my_script.js"></>
+
+    <script src="./assets/js/my_script.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "OEM Seat Covers",
+        "image": "IMAGE_URL",
+        "description": "High-quality, made-to-order seat covers",
+        "brand": {
+          "@type": "Brand",
+          "name": "Auto Nation Seat Factory"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "YOUR_URL",
+          "priceCurrency": "USD",
+          "price": "PRICE",
+          "availability": "https://schema.org/InStock",
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingRate": {
+              "@type": "MonetaryAmount",
+              "value": "0",
+              "currency": "USD"
+            },
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "US"
+            }
+          }
+        }
+      }
+      </script>
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+      </script>
+
 </body>
 </html>
 <!-- test -->
