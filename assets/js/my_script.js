@@ -165,3 +165,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+//header part
+
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.header__items');
+  
+  hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+});

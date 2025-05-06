@@ -66,24 +66,66 @@ html {
   box-shadow: 0px 2px 10px rgba(207, 132, 85, 0.5);
   border-radius: 5px;
   position: relative;
+  flex-wrap: nowrap;
+}
+@media (max-width: 940px) {
+  .header__container {
+    padding: 0 30px;
+    height: auto;
+    min-height: 8rem;
+  }
+}
+@media (max-width: 765px) {
+  .header__container {
+    padding: 0 20px;
+    flex-wrap: wrap;
+    padding-bottom: 1rem;
+  }
 }
 .header__flag {
   flex: 1;
   display: flex;
   align-items: center;
+  order: 1;
+  min-width: 120px;
 }
 .header__flag--img {
   width: 20rem;
   height: 11rem;
+  transition: all 0.3s ease;
+}
+@media (max-width: 940px) {
+  .header__flag--img {
+    width: 15rem;
+    height: 8rem;
+  }
+}
+@media (max-width: 765px) {
+  .header__flag--img {
+    width: 100%;
+    max-width: 18rem;
+    height: auto;
+    margin: 1rem auto 0;
+  }
+}
+@media (max-width: 765px) {
+  .header__flag {
+    flex: 0 0 100%;
+    order: 3;
+    justify-content: center;
+    margin-top: 1rem;
+  }
 }
 .header__items {
   flex: 2;
   display: flex;
   justify-content: center;
-  gap: 3.5rem;
+  gap: 2rem;
+  order: 2;
 }
 .header__items a {
   text-decoration: none;
+  white-space: nowrap;
 }
 .header__items p {
   margin: 0;
@@ -96,14 +138,89 @@ html {
   color: #cf8455;
   transform: scale(1.05);
 }
+@media (max-width: 940px) {
+  .header__items p {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 765px) {
+  .header__items {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    padding: 1rem 0;
+    order: 4;
+  }
+  .header__items.active {
+    display: flex;
+  }
+}
 .header__logo {
   flex: 1;
   display: flex;
   justify-content: flex-end;
+  order: 3;
+  min-width: 120px;
 }
 .header__logo--img {
   width: 12rem;
   height: auto;
+  transition: all 0.3s ease;
+}
+@media (max-width: 940px) {
+  .header__logo--img {
+    width: 10rem;
+  }
+}
+@media (max-width: 765px) {
+  .header__logo--img {
+    width: 15rem;
+    margin: 1rem 0;
+  }
+}
+@media (max-width: 765px) {
+  .header__logo {
+    flex: 0 0 100%;
+    order: 1;
+    justify-content: center;
+  }
+}
+.header .hamburger {
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1000;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+.header .hamburger span {
+  width: 100%;
+  height: 0.3rem;
+  background: #333;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  transform-origin: 1px;
+}
+.header .hamburger.active span:first-child {
+  transform: rotate(45deg) translateY(0.5rem);
+}
+.header .hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.header .hamburger.active span:last-child {
+  transform: rotate(-45deg) translateY(-0.5rem);
+}
+@media (max-width: 765px) {
+  .header .hamburger {
+    display: flex;
+  }
 }
 
 .ebay-faq-section {
