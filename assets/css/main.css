@@ -57,63 +57,43 @@ html {
   background-color: rgba(211, 187, 156, 0.1);
 }
 
+body.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
 .header__container {
-  height: 8rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 40px;
-  box-shadow: 0px 2px 10px rgba(207, 132, 85, 0.5);
-  border-radius: 5px;
+  padding: 0 2rem;
+  height: 8rem;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(207, 132, 85, 0.3);
+  border-radius: 8px;
   position: relative;
-  flex-wrap: nowrap;
 }
-@media (max-width: 940px) {
+@media (max-width: 770px) {
   .header__container {
-    padding: 0 30px;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 2rem;
     height: auto;
-    min-height: 8rem;
-  }
-}
-@media (max-width: 765px) {
-  .header__container {
-    padding: 0 20px;
-    flex-wrap: wrap;
-    padding-bottom: 1rem;
   }
 }
 .header__flag {
   flex: 1;
   display: flex;
-  align-items: center;
-  order: 1;
-  min-width: 120px;
+  justify-content: flex-start;
 }
 .header__flag--img {
   width: 20rem;
   height: 11rem;
-  transition: all 0.3s ease;
 }
-@media (max-width: 940px) {
-  .header__flag--img {
-    width: 15rem;
-    height: 8rem;
-  }
-}
-@media (max-width: 765px) {
-  .header__flag--img {
-    width: 100%;
-    max-width: 18rem;
-    height: auto;
-    margin: 1rem auto 0;
-  }
-}
-@media (max-width: 765px) {
+@media (max-width: 770px) {
   .header__flag {
-    flex: 0 0 100%;
-    order: 3;
-    justify-content: center;
-    margin-top: 1rem;
+    display: none;
   }
 }
 .header__items {
@@ -121,7 +101,6 @@ html {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  order: 2;
 }
 .header__items a {
   text-decoration: none;
@@ -129,28 +108,29 @@ html {
 }
 .header__items p {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.header__items p:hover, .header__items p:focus {
+.header__items p:hover {
   color: #cf8455;
   transform: scale(1.05);
 }
-@media (max-width: 940px) {
-  .header__items p {
-    font-size: 1.3rem;
-  }
-}
-@media (max-width: 765px) {
+@media (max-width: 770px) {
   .header__items {
     display: none;
     flex-direction: column;
+    gap: 1.2rem;
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    right: 0;
     width: 100%;
-    gap: 1rem;
-    padding: 1rem 0;
-    order: 4;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 1rem 1rem;
+    z-index: 5;
   }
   .header__items.active {
     display: flex;
@@ -160,66 +140,58 @@ html {
   flex: 1;
   display: flex;
   justify-content: flex-end;
-  order: 3;
-  min-width: 120px;
 }
 .header__logo--img {
   width: 12rem;
+  max-width: 100%;
   height: auto;
-  transition: all 0.3s ease;
 }
-@media (max-width: 940px) {
+@media (max-width: 770px) {
   .header__logo--img {
+    margin: 1rem auto;
     width: 10rem;
   }
 }
-@media (max-width: 765px) {
-  .header__logo--img {
-    width: 15rem;
-    margin: 1rem 0;
-  }
-}
-@media (max-width: 765px) {
+@media (max-width: 770px) {
   .header__logo {
-    flex: 0 0 100%;
-    order: 1;
+    order: 2;
     justify-content: center;
   }
 }
-.header .hamburger {
-  flex-direction: column;
-  justify-content: space-around;
-  width: 2.5rem;
-  height: 2.5rem;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  z-index: 1000;
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
+
+.hamburger {
+  display: none;
 }
-.header .hamburger span {
-  width: 100%;
-  height: 0.3rem;
-  background: #333;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-  transform-origin: 1px;
-}
-.header .hamburger.active span:first-child {
-  transform: rotate(45deg) translateY(0.5rem);
-}
-.header .hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-.header .hamburger.active span:last-child {
-  transform: rotate(-45deg) translateY(-0.5rem);
-}
-@media (max-width: 765px) {
-  .header .hamburger {
+@media (max-width: 770px) {
+  .hamburger {
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    z-index: 10;
+  }
+  .hamburger span {
+    width: 100%;
+    height: 0.3rem;
+    background: #333;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  .hamburger.active span:first-child {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:last-child {
+    transform: rotate(-45deg) translate(5px, -5px);
   }
 }
 
