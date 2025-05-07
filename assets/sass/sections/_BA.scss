@@ -8,20 +8,21 @@ $msuxf-transition-timing: ease !default;
 
 .ba__container {
   position: relative;
-  min-height: 100vh;
+  min-height: 50vh;
   text-align: left;
 }
 
 .slider3 {
   width: 100vw;
-  height: 100vh;
+  height: 60vh;
 }
 
 .slide3 {
-  display: flex; // فقط اسلاید فعال نشون داده میشه
+  margin-top: -6rem;
+  display: flex; 
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 30rem;
   position: absolute;
   width: 100%;
 
@@ -77,13 +78,12 @@ $msuxf-transition-timing: ease !default;
 
 .slider3__pagination {
   position: absolute;
-  bottom: 7vh;
+  bottom: 1rem;
   width: 100%;
   text-align: center;
 }
 
 .button3 {
-  margin-top: 0;
   position: relative;
   display: inline-block;
   padding: 20px 40px;
@@ -102,4 +102,30 @@ $msuxf-transition-timing: ease !default;
     color: $msuxf-background-dark;
     background-color: white;
   }
+}
+
+
+.ba-title {
+  text-align: center;
+  width: 100%;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #66361e;
+  position: relative;
+  display: inline-block;
+
+} 
+
+
+.ba__subtitle {
+  text-align: center;
+  width: 100%;
+  font-size: 1.4rem;
+  color: #7a4a2b;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  margin-bottom: 4rem;
+  
 }
