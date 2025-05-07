@@ -152,8 +152,19 @@ document.addEventListener('DOMContentLoaded', function() {
 }); 
 
   //BA Section
-
-    window.location.href="#slide-1";
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('.slide3').forEach(slide => slide.classList.remove('active'));
+    document.getElementById('slide3-1')?.classList.add('active');
+  
+    document.querySelectorAll('.button3').forEach((button, index) => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelectorAll('.slide3').forEach(slide => slide.classList.remove('active'));
+        document.getElementById(`slide3-${index + 1}`)?.classList.add('active');
+      });
+    });
+  });
+  
  
 //header part
 
