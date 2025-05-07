@@ -10,8 +10,12 @@
     border-radius: 8px;
     position: sticky;
     flex-wrap: nowrap;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: height 0.3s ease-out, box-shadow 0.3s ease-out;
     z-index: 1000;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    will-change: transform, height;
 
     @media (max-width: 900px) {
       padding: 0 1.5rem;
@@ -225,6 +229,8 @@ header {
 .header__container.scrolled {
   height: 6rem;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+ 
+
   
   .header__logo--img {
     width: 13rem;
