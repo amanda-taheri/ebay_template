@@ -227,7 +227,7 @@ header {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   
   .header__logo--img {
-    width: 9rem;
+    width: 13rem;
     height: 7rem;
   }
   .header__flag--img {
@@ -260,18 +260,3 @@ header {
   }
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes menuSlideIn {
-  from {
-    transform: translateY(-15px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
