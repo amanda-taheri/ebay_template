@@ -78,12 +78,11 @@ body.no-scroll {
   border-radius: 8px;
   position: sticky;
   flex-wrap: nowrap;
-  transition: height 0.3s ease-out, box-shadow 0.3s ease-out;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   z-index: 1000;
   transform: translateZ(0);
   backface-visibility: hidden;
   perspective: 1000px;
-  will-change: transform, height;
 }
 @media (max-width: 900px) {
   .header__container {
