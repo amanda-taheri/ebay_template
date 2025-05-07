@@ -299,7 +299,7 @@ header {
   height: 7rem;
 }
 .header__container.scrolled .header__flag--img {
-  width: 12rem;
+  width: 17rem;
   height: 9.5rem;
 }
 @media (max-width: 770px) {
