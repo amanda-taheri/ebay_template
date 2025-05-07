@@ -186,3 +186,37 @@ window.addEventListener('scroll', function() {
     header.classList.remove('scrolled');
   }
 });
+
+
+//sticky problem
+const header = document.getElementById('header');
+let lastScroll = 0;
+const scrollThreshold = 10; // آستانه اسکرول برای تغییر حالت
+
+function handleScroll() {
+  const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  
+  if (currentScroll > scrollThreshold) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+  
+  // جلوگیری از فلیکر با استفاده از requestAnimationFrame
+  lastScroll = currentScroll;
+}
+
+// استفاده از debounce برای بهینه‌سازی عملکرد
+let isTicking = false;
+window.addEventListener('scroll', () => {
+  if (!isTicking) {
+    window.requestAnimationFrame(() => {
+      handleScroll();
+      isTicking = false;
+    });
+    isTicking = true;
+  }
+});
+
+// مقداردهی اولیه
+handleScroll();

@@ -12,6 +12,9 @@
     flex-wrap: nowrap;
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     z-index: 1000;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
 
     @media (max-width: 900px) {
       padding: 0 1.5rem;
@@ -231,7 +234,7 @@ header {
     height: 7rem;
   }
   .header__flag--img {
-    width: 12rem;
+    width: 17rem;
     height: 9.5rem;
   }
   
@@ -247,7 +250,7 @@ header {
     }
     
     .header__logo--img {
-      width: 8.2rem;
+      width: 10.2rem;
       margin: 0;
       margin-right: auto;
       transform: translateX(-1.5rem) scale(0.92) translateY(-4%);
