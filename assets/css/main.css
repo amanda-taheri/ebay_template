@@ -314,7 +314,7 @@ header {
     transition: all 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
   }
   .header__container.scrolled .header__logo--img {
-    width: 8.2rem;
+    width: 10.2rem;
     margin: 0;
     margin-right: auto;
     transform: translateX(-1.5rem) scale(0.92) translateY(-4%);
