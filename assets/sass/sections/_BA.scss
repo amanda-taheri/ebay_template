@@ -9,7 +9,6 @@ $msuxf-transition-timing: ease !default;
 .ba__container {
   position: relative;
   min-height: 100vh;
-  overflow: hidden;
   text-align: left;
 }
 
@@ -19,23 +18,24 @@ $msuxf-transition-timing: ease !default;
 }
 
 .slide3 {
-  display: flex;
+  display: flex; // فقط اسلاید فعال نشون داده میشه
   justify-content: center;
   align-items: center;
   height: 100vh;
   position: absolute;
   width: 100%;
 
-  &:target {
-    
+  &.active {
+    display: flex;
+
     .slide3__image {
       transform: translate(0);
       opacity: 1;
-      transition-delay: 0.5s;
-      filter: blur(0) drop-shadow(0px 10px 30px rgba(0,0,0,0.35));
+      filter: blur(0) drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.35));
     }
   }
 }
+
 
 .slide3__bg {
   position: absolute;
@@ -83,6 +83,7 @@ $msuxf-transition-timing: ease !default;
 }
 
 .button3 {
+  margin-top: 0;
   position: relative;
   display: inline-block;
   padding: 20px 40px;
@@ -93,7 +94,7 @@ $msuxf-transition-timing: ease !default;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: white;
+  color: rgb(0, 0, 0);
   transition: all $msuxf-transition-duration $msuxf-transition-timing;
   appearance: none;
 
